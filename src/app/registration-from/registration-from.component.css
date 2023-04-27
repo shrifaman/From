@@ -1,29 +1,37 @@
 #from{
-    height: 480px;
+    height: 400px;
     width: 700px;
     background-color: wheat;
     position: relative;
     left: 300px;
-    top: 10px;
+    top: 25px;
 }
-mat-form-field{
-    width: 500px;
-    position: inherit;
-    left: 100px;
-    top: 60px;
-}
-button{
+span{
     position: relative;
-    top: 170px;
-    right: 400px;
+    top: 20px;
+    left: 180px;
+    font-size: 20px;
+}
+mat-form-field {
+    width: 500px;
+    height: 70px;
+    position: relative;
+    top: 40px;
+    left: 100px;
+
+}
+.reset{
+    position: relative;
+    top: 40px;
+    left: 100px;
 }
 .svae{
     position: relative;
-    right: 250px;
+    top: 40px;
+    left: 250px;
 }
 .delete{
     position: relative;
-    left: 500px;
-    top: 110px;
+    top: 40px;
+    left: 380px;
 }
-

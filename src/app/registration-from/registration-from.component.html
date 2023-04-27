@@ -1,21 +1,24 @@
-<div id="from">
-    <mat-form-field appearance="fill">
-        <mat-label>Enter Your Name</mat-label>
-        <input matInput>
-      </mat-form-field><br>
-      <mat-form-field appearance="fill">
-        <mat-label>Enter Your Roll Number</mat-label>
-        <input matInput>
-      </mat-form-field><br>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput>
-      </mat-form-field><br>
-      <mat-form-field appearance="fill">
-        <mat-label>Mobile Number</mat-label>
-        <input matInput>
-      </mat-form-field>
-    <button mat-raised-button color="warn"> Reset</button>
-    <button mat-raised-button color="warn" class="svae"> Save</button>
-    <button mat-raised-button color="warn" class="delete"> Delete</button>
+<div id="from" >
+  <form [formGroup]="add_std">
+   <span>STUDENT REGISTRATION FROM</span><br>
+   <mat-form-field appearance="fill" >
+    <mat-label>Enter Your Name</mat-label>
+    <input matInput type="text" formControlName="std_name">
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter Your Roll Number</mat-label>
+    <input matInput  formControlName="std_roll">
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="std_address">
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Mobile Number</mat-label>
+    <input matInput formControlName="std_mobilr">
+  </mat-form-field><br>
+  <button mat-raised-button color="warn" class="reset" routerLink="/std_detalis"> BACK</button>
+  <button mat-raised-button color="warn" class="svae"  (click)="reset()" >RESET</button>
+  <button mat-raised-button color="warn" class="delete" (click)="onSave()" [disabled]="!add_std.valid">SAVE</button>
+</form>
 </div>

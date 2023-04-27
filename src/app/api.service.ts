@@ -13,5 +13,8 @@ export class ApiService {
   get_student(){
     return this.http.get(this.baseUrl+'new_view.php ');
   }
+  post_std(data:any){
+    return this.http.post(this.baseUrl+ 'new_insert.php',data);
+  }
 }
  

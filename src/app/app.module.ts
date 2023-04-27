@@ -17,6 +17,9 @@ import { StudentDetalisComponent } from './student-detalis/student-detalis.compo
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { FooterComponent } from './footer/footer.component';
+import { ViewportComponent } from './viewport/viewport.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { MatSortModule } from '@angular/material/sort';
     AppComponent,
     HomeComponent,
     RegistrationFromComponent,
-    StudentDetalisComponent
+    StudentDetalisComponent,
+    FooterComponent,
+    ViewportComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,8 @@ import { MatSortModule } from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    ReactiveFormsModule
     
     
   ],
