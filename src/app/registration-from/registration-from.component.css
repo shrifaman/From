@@ -1,0 +1,29 @@
+#from{
+    height: 480px;
+    width: 700px;
+    background-color: wheat;
+    position: relative;
+    left: 300px;
+    top: 10px;
+}
+mat-form-field{
+    width: 500px;
+    position: inherit;
+    left: 100px;
+    top: 60px;
+}
+button{
+    position: relative;
+    top: 170px;
+    right: 400px;
+}
+.svae{
+    position: relative;
+    right: 250px;
+}
+.delete{
+    position: relative;
+    left: 500px;
+    top: 110px;
+}
+
