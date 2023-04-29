@@ -6,7 +6,8 @@ import { StudentDetalisComponent } from './student-detalis/student-detalis.compo
 const routes: Routes = [
   {path:'',redirectTo:'std_detalis',pathMatch:"full"},
   {path:'std_detalis',component:StudentDetalisComponent},
-  {path:'registration_from',component:RegistrationFromComponent}
+  {path:'registration_from',component:RegistrationFromComponent},
+  {path:'registration_from/:id',component:RegistrationFromComponent},
 ];
 
 @NgModule({

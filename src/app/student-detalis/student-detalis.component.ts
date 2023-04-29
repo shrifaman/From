@@ -16,7 +16,7 @@ export class StudentDetalisComponent implements OnInit{
 
   total_count:number =0;
    
-  displayedColumns: string[] = ['sn', 'std_name', 'std_roll', 'std_address','std_mobilr']; 
+  displayedColumns: string[] = ['sn', 'std_name', 'std_roll', 'std_address','std_mobilr','std_action',]; 
   dataSource = new MatTableDataSource();
   constructor(
     private api :ApiService
@@ -24,7 +24,7 @@ export class StudentDetalisComponent implements OnInit{
    ngOnInit(): void{
       this.api.get_student().subscribe(
         (res:any) =>{
-          console.log(res);
+          // console.log(res);
           this.dataSource.data = res.data; 
           this.total_count = res.data.length;
          }

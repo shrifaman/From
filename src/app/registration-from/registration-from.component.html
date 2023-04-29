@@ -1,6 +1,7 @@
 <div id="from" >
   <form [formGroup]="add_std">
-   <span>STUDENT REGISTRATION FROM</span><br>
+   <span>{{(sid)?"UPDATE STUDENT FROM":"STUDENT REGISTRATION FROM"}}</span><br>
+   <input type="hidden" formControlName="std_id" *ngIf="sid">
    <mat-form-field appearance="fill" >
     <mat-label>Enter Your Name</mat-label>
     <input matInput type="text" formControlName="std_name">
@@ -18,7 +19,7 @@
     <input matInput formControlName="std_mobilr">
   </mat-form-field><br>
   <button mat-raised-button color="warn" class="reset" routerLink="/std_detalis"> BACK</button>
-  <button mat-raised-button color="warn" class="svae"  (click)="reset()" >RESET</button>
-  <button mat-raised-button color="warn" class="delete" (click)="onSave()" [disabled]="!add_std.valid">SAVE</button>
+  <button mat-raised-button color="warn" class="svae"  (click)="reset()" *ngIf="!sid ">RESET</button>
+  <button mat-raised-button color="warn" class="delete" (click)="(sid)?updateStd:onSave()">{{(sid)?"UPDATE":"ADD"}}</button>
 </form>
 </div>
