@@ -20,6 +20,6 @@
   </mat-form-field><br>
   <button mat-raised-button color="warn" class="reset" routerLink="/std_detalis"> BACK</button>
   <button mat-raised-button color="warn" class="svae"  (click)="reset()" *ngIf="!sid ">RESET</button>
-  <button mat-raised-button color="warn" class="delete" (click)="(sid)?updateStd:onSave()">{{(sid)?"UPDATE":"ADD"}}</button>
+  <button mat-raised-button color="warn" class="delete" (click)="(sid)?updateStd():onSave()">{{(sid)?"UPDATE":"ADD"}}</button>
 </form>
 </div>

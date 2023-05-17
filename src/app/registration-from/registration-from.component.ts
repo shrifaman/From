@@ -45,15 +45,16 @@ export class RegistrationFromComponent implements OnInit{
         (res:any)=>{
           this.add_std.reset();
           this.router.navigate(['/std_detalis']);
-          console.log(res )
+          console.log(res)
         }
       )
     }
     updateStd(){
-      console.log(this.add_std.value)
-      // this.api.put_sdt(this.add_std.value).subscribe((res:any)=>{
-      //   console.log(res.data)
-      // })
+      // console.log(this.add_std.value)
+       this.api.put_sdt(this.add_std.value).subscribe((res:any)=>{
+        this.router.navigate(['/std_detalis']);
+       console.log(res.message)
+       })
     }
 
     reset(){ 
